@@ -1,2 +1,13 @@
-*.iml
+classes
 target
+.classpath
+.project
+build.properties.local
+ParseException.java
+SQLGrammar.java
+SQLGrammarConstants.java
+SQLGrammarTokenManager.java
+Token.java
+*.iml
+*.ipr
+*.iws
