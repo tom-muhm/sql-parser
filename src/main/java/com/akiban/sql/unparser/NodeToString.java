@@ -224,6 +224,10 @@ public class NodeToString
             return deallocateStatementNode((DeallocateStatementNode)node);
         case NodeTypes.COPY_STATEMENT_NODE:
             return copyStatementNode((CopyStatementNode)node);
+        case NodeTypes.SIMPLE_STRING_OPERATOR_NODE:
+            return ((SimpleStringOperatorNode) node).getOperator().toUpperCase() + " ( " + toString(((SimpleStringOperatorNode) node).getOperand()) + " )";
+        case NodeTypes.TRIM_OPERATOR_NODE:
+            return ((TrimOperatorNode) node).getOperator().toUpperCase() + " ( " + toString(((TrimOperatorNode) node).getLeftOperand()) + " )";
         default:
             return "**UNKNOWN(" + node.getNodeType() +")**";
         }
